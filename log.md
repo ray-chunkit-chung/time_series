@@ -2,7 +2,7 @@
 
 ## Day 000: Jul 06, 2018
 
-**Theme No.1: Time series clustering PRJ_TSC**. To make sense out of time series in unsupervised manners.
+**Theme 1: Time series clustering PRJ_TSC**. To make sense out of time series in unsupervised manners.
 
 Based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/, wrote a kmean clustering for fixed length time series. 
 
@@ -12,17 +12,33 @@ Based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/, wr
 
 Added linear dummy data for testing.
 
-# 100 Days Of ML Code Plan
-
 ## Day 003: Jul 08, 2018
+## Day 004: Jul 09, 2018
+## Day 005: Jul 10, 2018
+## Day 006: Jul 11, 2018
+## Day 007: Jul 12, 2018
+
+
+
+# 100 Days Of ML Code Backlog
 
 **PRJ_TSC**. Parallel the kmean by ipyparallel based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
 
-## Day 004: Jul 09, 2018
-
-**Theme No.2: Study stats and models STD_MDL**. Properties and uses of prior, exp family, latent model, etc..
+**PRJ_TSC**. Variable length time series kmeans with dtw.
 
 
+**PRJ_TSC**. Try a multi-variant Lower-bounded dtw here. http://ciir.cs.umass.edu/pubfiles/mm-40.pdf
+Also see: http://alexminnaar.com/time-series-classification-and-clustering-with-python.html
 
+**PRJ_TSC**. Try a GMM? Try an HMM? Try a VAE?
 
+**Theme 2: Study stats and models STDY_MDL**. Properties and uses of priors, exp family, latent models, etc..
+
+**Theme 3: Study search and combinational optimization STDY_SRCH**.
+
+**Theme 4: Study python speed up STDY_SPDUP**. Cython, pypy, parallel computating, vectorize technique algorithm etc.
+
+**Theme 5: Prepare production env PRJ_PROD** 
+
+**Theme 6: Blog styling PRJ_BLOG** 
 

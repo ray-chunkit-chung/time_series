@@ -27,7 +27,7 @@ def init_centroids(data, num_clust):
     return centroids
 
 
-def k_means_ts(data, num_clust, num_iter, kmeanpp=False):
+def kmeans_ts(data, num_clust, num_iter, kmeanpp=False):
 	"""
 	kmeans for time series
 	"""
@@ -72,6 +72,12 @@ def k_means_ts(data, num_clust, num_iter, kmeanpp=False):
     return centroids
 
 
+from sklearn.cluster import KMeans
+def kmeans_sklearn(data, num_clust, num_iter):
+    kmeans = KMeans(n_clusters=num_clust, max_iter=num_iter).fit(data)
+    return kmeans 
+
+
 def load_sin_data()
     """ Make 10000 sin amplitude signal with noise. Length of signal 500
     """
@@ -90,12 +96,46 @@ def load_sin_data()
 	return signals
 
 
+def load_linear_data()
+    """ Make 10000 linear signal with 5 slopes and with noise. Length of signal 500
+    """
+    n = 10000
+    t_len = 500
+
+    xs = np.linspace(0, 1, t_len)
+    noise = np.array([np.random.normal(0,0.1,t_len) for _ in range(n)])
+    ts = np.array([xs * -2 for _ in range(int(n/5))])
+    for i in range(-1,3):
+        new_ts = np.array([xs * i for _ in range(int(n/5))])
+        ts = np.append(ts, new_ts, axis=0)
+
+    ts += noise
+    np.random.shuffle(ts)
+    return ts
+
+
+from tslearn.datasets import CachedDatasets
+from tslearn.preprocessing import TimeSeriesScalerMeanVariance, TimeSeriesResampler
+def load_tslearn_data()
+    X_train, y_train, X_test, y_test = CachedDatasets().load_dataset("Trace")
+    X_train = X_train[y_train < 4]  # Keep first 3 classes
+    np.random.shuffle(X_train)
+    X_train = TimeSeriesScalerMeanVariance().fit_transform(X_train[:50])  # Keep only 50 time series
+    X_train = TimeSeriesResampler(sz=40).fit_transform(X_train)  # Make time series shorter
+    X_train = X_train.reshape(50,-1)
+    return X_train
+
+
 def main():
+    """
+    TODO: rewrite to more sklearn style. At least give me assignment and centroids
+    """
 	c = 100
 	i = 100
-	data = load_sin_data()
+    # data = load_sin_data()
+    data = load_linear_data()
     t1 = time.time()
-	centroids = k_means_ts(data, num_clust=c, num_iter=i, kmeanpp=True)
+	centroids = kmeans_ts(data, num_clust=c, num_iter=i, kmeanpp=True)
 	print('Result: ', centroids)
     t2 = time.time()
     print("Took {} seconds".format(t2 - t1))

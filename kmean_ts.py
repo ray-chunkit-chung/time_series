@@ -1,3 +1,7 @@
+# Based on Jason Snell • Oct. 23rd, 2017 • New Relic News
+# Optimizing k-means Clustering for Time Series Data
+# https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
+
 import time
 import numpy as np
 
@@ -128,7 +132,7 @@ def load_tslearn_data()
 
 def main():
     """
-    TODO: rewrite to more sklearn style. At least give me assignment and centroids
+    TODO: rewrite to give me cluster assignment and centroids.
     """
 	c = 100
 	i = 100

@@ -1,4 +1,4 @@
-# Based on Jason Snell • Oct. 23rd, 2017 • New Relic News
+# Codes are based on Jason Snell • Oct. 23rd, 2017 • New Relic News
 # Optimizing k-means Clustering for Time Series Data
 # https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
 
@@ -35,7 +35,7 @@ def kmeans_ts(data, num_clust, num_iter, kmeanpp=False):
 	"""
 	kmeans for time series
 	"""
-    print('kmean++ init...')
+    print('Init...')
     t1 = time.time()
     if kmeanpp==True:
     	# kmean++ init
@@ -120,7 +120,8 @@ def load_linear_data()
 
 from tslearn.datasets import CachedDatasets
 from tslearn.preprocessing import TimeSeriesScalerMeanVariance, TimeSeriesResampler
-def load_tslearn_data()
+def load_tslearn_data():
+    """ Time series data with variable length """
     X_train, y_train, X_test, y_test = CachedDatasets().load_dataset("Trace")
     X_train = X_train[y_train < 4]  # Keep first 3 classes
     np.random.shuffle(X_train)

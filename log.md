@@ -13,19 +13,24 @@ Based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/, wr
 Added linear dummy data for testing.
 
 ## Day 003: Jul 08, 2018
+
+**PRJ_TSC**. Parallel the kmean by ipyparallel based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
+
 ## Day 004: Jul 09, 2018
 ## Day 005: Jul 10, 2018
 ## Day 006: Jul 11, 2018
-## Day 007: Jul 12, 2018
+## Day 007: Jul 13, 2018
+## Day 008: Jul 14, 2018
+## Day 009: Jul 15, 2018
+## Day 010: Jul 16, 2018
 
 
 
 # 100 Days Of ML Code Backlog
 
-**PRJ_TSC**. Parallel the kmean by ipyparallel based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
+**PRJ_TSC**. Search any available dynamic time wrapping (dtw) implementation.
 
 **PRJ_TSC**. Variable length time series kmeans with dtw.
-
 
 **PRJ_TSC**. Try a multi-variant Lower-bounded dtw here. http://ciir.cs.umass.edu/pubfiles/mm-40.pdf
 Also see: http://alexminnaar.com/time-series-classification-and-clustering-with-python.html

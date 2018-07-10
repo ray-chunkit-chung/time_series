@@ -17,6 +17,9 @@ Added linear dummy data for testing.
 **PRJ_TSC**. Parallel the kmean by ipyparallel based on https://blog.newrelic.com/2017/10/23/optimizing-k-means-clustering/
 
 ## Day 004: Jul 09, 2018
+
+**PRJ_TSC**. Search for any existing dynamic time wrapping (dtw) implementation.
+
 ## Day 005: Jul 10, 2018
 ## Day 006: Jul 11, 2018
 ## Day 007: Jul 13, 2018
@@ -25,12 +28,13 @@ Added linear dummy data for testing.
 ## Day 010: Jul 16, 2018
 
 
-
 # 100 Days Of ML Code Backlog
 
-**PRJ_TSC**. Search any available dynamic time wrapping (dtw) implementation.
+**PRJ_TSC**. Make example data to benchmark a few existing dtw implementations.
 
 **PRJ_TSC**. Variable length time series kmeans with dtw.
+
+**PRJ_TSC**. Time series clustering wrap over the kmeans and dtw.
 
 **PRJ_TSC**. Try a multi-variant Lower-bounded dtw here. http://ciir.cs.umass.edu/pubfiles/mm-40.pdf
 Also see: http://alexminnaar.com/time-series-classification-and-clustering-with-python.html

@@ -21,6 +21,9 @@ Added linear dummy data for testing.
 **PRJ_TSC**. Search for any existing dynamic time wrapping (dtw) implementation.
 
 ## Day 005: Jul 10, 2018
+
+**PRJ_TSC**. Make example data to benchmark a few existing dtw implementations.
+
 ## Day 006: Jul 11, 2018
 ## Day 007: Jul 13, 2018
 ## Day 008: Jul 14, 2018
@@ -30,7 +33,6 @@ Added linear dummy data for testing.
 
 # 100 Days Of ML Code Backlog
 
-**PRJ_TSC**. Make example data to benchmark a few existing dtw implementations.
 
 **PRJ_TSC**. Variable length time series kmeans with dtw.
 
